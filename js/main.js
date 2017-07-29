@@ -5,28 +5,30 @@ let label = `<label for="`;
 let controlLabel = `class="col-sm-2 control-label">`;
 let colDiv = `<div class="col-sm-10">`;
 let input = `<input type="`
-let formControl = `class="form-control"`;
+let formControl = `class="form-control" id="`;
+let formName = `" name="user_`
+let ph = `" placeholder="`
 let unDiv = `</div>
 </div>`
 let name = `${formGroup}
 ${label}name" ${controlLabel}Name:</label>
 ${colDiv}
-${input}text" ${formControl} id="name" name="user_name" placeholder="Your Name">
+${input}text" ${formControl}name${formName}name${ph}Your Name">
 ${unDiv}`;
 let phone = `${formGroup}
 ${label}phone" ${controlLabel}Phone:</label>
 ${colDiv}
-${input}tel" ${formControl} id="phone" name="user_phone" placeholder="(###)###-####">
+${input}tel" ${formControl}phone${formName}phone${ph}(###)###-####">
 ${unDiv}`;
 let email = `${formGroup}
 ${label}email" ${controlLabel}Email:</label>
 ${colDiv}
-${input}mail" ${formControl} id="email" name="user_email" placeholder="you@example.com">
+${input}mail" ${formControl}email${formName}email${ph}you@example.com">
 ${unDiv}`;
 let msg = `${formGroup}
 ${label}msg" ${controlLabel}Message:</label>
 ${colDiv}
-<textarea ${formControl} id="msg" name="user_message" placeholder="Max length 500 characters"></textarea>
+<textarea ${formControl}msg${formName}message${ph}Max length 500 characters"></textarea>
 ${unDiv}`;
 let button = `${formGroup}
 <div class="col-sm-offset-2 col-sm-10">
