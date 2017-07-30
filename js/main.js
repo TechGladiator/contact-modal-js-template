@@ -1,3 +1,26 @@
+// build contact modal
+let contactModal = `<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="contactModalLabel">Contact Us</h4>
+          </div>
+
+          <div class="modal-body">
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+$('body').append(contactModal);
+
 // build contact form
 let form = `<form action=" " id="contact-us" class="form-horizontal contact-form">`;
 let formGroup = `<div class="form-group">`;
@@ -43,5 +66,6 @@ ${button}
 </form>`;
 
 $('.btn').click(function () {
-  $('body').append(contactForm)
+  $('.modal-body').append(contactForm),
+  $('#contactModal').modal('toggle')
 })
